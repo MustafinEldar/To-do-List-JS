@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/list.png" />
+    <title>To do List</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="javascript/script.js" defer></script>
+  </head>
+  <body>
+    <div class="todo-container">
+      <h1 class="todo-title">Заметки</h1>
+      <input
+        type="text"
+        placeholder="Введите название"
+        id="title"
+        class="todo-input"
+      />
+      <button id="create" class="todo-button">
+        Добавить
+      </button>
+
+      <ul id="list" class="todo-list">
+      </ul>
+    </div>
+    <div id="deleteModal" class="modal">
+      <form class="modal-content">
+        <div class="container">
+          <h1>Удаление заметки</h1>
+          <p>Вы уверены, что хотите удалить эту заметку?</p>
+          <div class="clearfix">
+            <button type="button" id="cancelBtn" class="cancelbtn">Отмена</button>
+            <button type="button" id="confirmBtn" class="deletebtn">Удалить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="editModal" class="modal">
+      <form class="modal-content">
+        <div class="container">
+          <h1>Редактирование заметки</h1>
+          <input type="text" placeholder="Введите новый текст" id="newText" class="modal-input" />
+          <div class="clearfix">
+            <button type="button" id="cancelEditBtn" class="cancelbtn">Отмена</button>
+            <button type="button" id="confirmEditBtn" class="editbtn">Сохранить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
